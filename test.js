@@ -1,6 +1,4 @@
-function test(a) {
-  // Write your code here
-  
+function test(a) {  
   //create object
   let lookup = {}
   
@@ -14,6 +12,10 @@ function test(a) {
   for (let num in lookup){
       if (lookup[num] == 1) return num
   }
+ // console.log(lookup)
 }
+console.log("sds")
+a = [1,2]
+test(a)
 
-test([5,5,6])
+console.log("sds")

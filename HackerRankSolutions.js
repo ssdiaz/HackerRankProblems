@@ -18,7 +18,6 @@ function lonleyInteger(a) {
 lonleyInteger([5,5,6])
 
 
-
 // Alternative to counting | Sorting without comparison
 function countingSort(arr) {
     // create integer array of 0s
