@@ -1,4 +1,5 @@
-function lonleyInteger(a) {    // FREQUENCY CHECK
+// FREQUENCY CHECK
+function lonleyInteger(a) {    
     //create object
     let lookup = {}
     
@@ -15,3 +16,24 @@ function lonleyInteger(a) {    // FREQUENCY CHECK
   }
   
 lonleyInteger([5,5,6])
+
+
+
+// Alternative to counting | Sorting without comparison
+function countingSort(arr) {
+    // create integer array of 0s
+    let n = 100
+    let integerArr = new Array(n).fill(0);
+    
+    //iterate and count values --- iteration didn't pass all tests
+    // for (let i = 0; i < n; i++){
+    //     let number = arr[i];     // will be the value
+    //     integerArr[number]++;
+    // }
+    
+    for (let num of arr){
+        integerArr[num]++;
+    }
+    
+    return integerArr;
+}
