@@ -36,3 +36,34 @@ function countingSort(arr) {
     
     return integerArr;
 }
+
+
+
+//Caesar's Cipher ** didn't pass all tests **
+    function caesarCipher(s, k) {
+        // Write your code here
+
+        let originalAlphabet = 'abcdefghijklmnopqrstuvwxyz'.split("");
+        let newAlphabet = [...originalAlphabet.slice(k), ...originalAlphabet.slice(0,k)];
+            
+        let cipher = {};
+        for (let i = 0; i < originalAlphabet.length; i++) {
+            cipher[originalAlphabet[i]] = newAlphabet[i];
+        }
+        
+        let newString = "";
+        for (let letter of s) {
+            if (!letter.match(/^[a-zA-Z]+$/)) {
+                newString += letter;
+            } else if (cipher[letter]) {
+                newString += cipher[letter];
+            } else {
+                letter = cipher[letter.toLowerCase()];
+                newString += letter.toUpperCase();
+            }
+        }
+        // console.log(newString)
+        return newString;
+    }
+
+    caesarCipher('middle-Outz', 2) // okffng-Qwvb
