@@ -24,8 +24,6 @@
             // s consists of English letters, digits, symbols and spaces.
 
 
-
-
 // *** NOTE: Answer not great: 7% better time, 5% better memory. ALSO this was the JPM question :) 
 
 /**
