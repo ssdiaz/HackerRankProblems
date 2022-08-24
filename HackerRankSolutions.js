@@ -14,7 +14,7 @@ function lonleyInteger(a) {
         if (lookup[num] == 1) return num
     }
   }
-  
+
 lonleyInteger([5,5,6])
 
 
