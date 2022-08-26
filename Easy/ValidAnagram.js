@@ -32,12 +32,20 @@ var isAnagram = function(s, t) {
     }
     
     for (let j of t) {
-        lookup[j] = (lookup[j] || 0) - 1;
+
+        // if (!lookup[j]) return false;
+        // lookup[j] = (lookup[j] || 0) - 1;
+        if (!lookup[j]) {
+            return false;
+        } else {
+            lookup[j] -= 1;
+        }
+
     }
     
-    for (let k in lookup) {
-        if (lookup[k] !== 0) return false;
-    }
+    // for (let k in lookup) {
+    //     if (lookup[k] !== 0) return false;
+    // }
     
     return true;
 };
